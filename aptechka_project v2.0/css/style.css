@@ -1,0 +1,213 @@
+:root {
+    --primary: #4361ee;
+    --primary-light: #4895ef;
+    --success: #4cc9f0;
+    --bg-card: #ffffff;
+    --text: #1e293b;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+}
+body {
+    background: 
+        linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cpath fill='%234361ee' fill-opacity='0.015' d='M37.4 135.8c-10.1-5.4-17.4-15.3-17.4-27.6 0-17.1 13.9-31 31-31s31 13.9 31 31c0 12.3-7.3 22.2-17.4 27.6-4.2 2.2-8.6 4-13.6 4s-9.4-1.8-13.6-4zM138 101.7c-4.3-6.7-10.8-11.7-18.6-14.3-7.2-2.4-15.2-2.3-22.4 0.3-7.2 2.6-13.6 7.7-17.8 14.5-4.3 6.7-6.7 14.7-6.7 22.8 0 8.1 2.4 16.1 6.7 22.8 4.2 6.8 10.6 11.9 17.8 14.5 7.2 2.6 15.2 2.7 22.4 0.3 7.8-2.6 14.3-7.6 18.6-14.3 4.3-6.7 6.7-14.7 6.7-22.8 0-8.1-2.4-16.1-6.7-22.8z'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: 200px;
+    min-height: 100vh;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text);
+    line-height: 1.6;
+}
+.navbar {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.cool-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    background: linear-gradient(90deg, var(--primary), var(--primary-light));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+.d-lg-flex.gap-2 button {
+    border-radius: 12px;
+    padding: 10px 16px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.d-lg-flex.gap-2 button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.container-fluid > .row {
+    min-height: calc(100vh - 200px);
+}
+
+.medicine-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.25s ease;
+    padding: 18px;
+}
+
+.medicine-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+.badge {
+    font-weight: 500;
+    padding: 0.4em 0.7em;
+    border-radius: 50px;
+    font-size: 0.85rem;
+}
+.badge.bg-secondary {
+    background-color: #e2e8f0;
+    color: #4a5568;
+}
+.badge.bg-success {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+.mobile-navbar {
+    background: var(--bg-card) !important;
+    border-top: 1px solid var(--border);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-navbar button {
+    transition: all 0.2s ease;
+    border-radius: 10px;
+    padding: 8px 4px;
+    color: var(--text-muted);
+    background: transparent;
+    border: none;
+    width: 100%;
+}
+
+.mobile-navbar button.active {
+    color: var(--primary) !important;
+    background: rgba(67, 97, 238, 0.1);
+}
+
+.mobile-navbar button i {
+    font-size: 1.2rem;
+    display: block;
+    margin: 0 auto 4px;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 991px) {
+    .container-fluid > .row {
+        min-height: calc(100vh - 150px);
+    }
+    .mobile-navbar .small {
+        font-size: 0.8rem;
+    }
+}
+
+button, .medicine-card, .badge {
+    transition: all 0.2s ease;
+}
+.footer {
+    margin-top: auto;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+}
+
+.footer small {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+#content > h3:first-child {
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.welcome-box {
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 2rem;
+    border: 1px solid #e2e8f0;
+}
+
+.welcome-box h2 {
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.welcome-box p {
+    margin-bottom: 0;
+    color: #475569;
+}
+.navbar-brand {
+    text-decoration: none !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-icon {
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 2px 6px rgba(67, 97, 238, 0.3);
+}
+
+.logo-text {
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    background: linear-gradient(90deg, var(--primary), var(--primary-light));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+}
+
+.navbar-brand {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #1e56a0 !important; 
+    text-decoration: none !important;
+}
+
+.logo-badge {
+    transition: transform 0.2s;
+.logo-badge:hover {
+    transform: scale(1.05);
+}
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: #1420c3;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
