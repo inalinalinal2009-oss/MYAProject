@@ -1,0 +1,7 @@
+{
+    "server/**/*.js": "eslint --fix",
+    "scripts/**/*.cjs": "eslint --fix",
+    "tests/**/*.mjs": "eslint --fix",
+    "js/app-init.js": "eslint --fix",
+    "*.{json,css,html,md}": "prettier --write"
+}
